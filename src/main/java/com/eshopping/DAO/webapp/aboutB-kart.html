@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About B-Kart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap');
+
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         body {
+            background: linear-gradient(to bottom, rgb(128, 182, 207), #fff);
+            color: #333333;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+      
+
+        /* Watermark */
+        body::before {
+            content: '';
+            background: url('images/logoB-kart-removebg-preview.png') no-repeat center center;
+            background-size: 50%;
+            opacity: 0.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: #2d2d2d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo img {
+            height: 65px;
+            position: relative;
+            top: 10px;
+        }
+
+        header .logo span {
+            font-size: 35px;
+            font-family: 'Pacifico', cursive;
+            color: #FFD700;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            bottom: 5px;
+            right: 5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #FFD700;
+            color: #2d2d2d;
+        }
+
+        /* About Section */
+        .about-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            color: #2d2d2d;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #FFD700;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin-top: 15px;
+            margin-left: 20px;
+            list-style-type: disc;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d2d2d;
+            color: #FFD700;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logoB-kart-removebg-preview.png" alt="B-Kart Logo">
+            <span>B-Kart</span>
+        </div>
+        <nav>
+            <a href="CustomerLogin.html">Login</a>
+            <a href="CustomerRegistration.html">Register</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <div class="about-container">
+        <!-- About B-Kart -->
+        <div class="section">
+            <h2>About B-Kart</h2>
+            <p>
+                Welcome to <strong>B-Kart</strong>, the ultimate destination for all your online shopping needs! 
+                Established with a vision to redefine e-commerce, B-Kart offers a seamless shopping experience that is 
+                both convenient and enjoyable. Our diverse range of products ensures that customers find everything they need 
+                in one place, delivered with the utmost care and efficiency.
+            </p>
+        </div>
+
+        <!-- Our Values -->
+        <div class="section">
+            <h2>Our Values</h2>
+            <p>
+                At B-Kart, we are committed to fostering a customer-centric approach that emphasizes:
+            </p>
+            <ul>
+                <li>Trust and Transparency</li>
+                <li>High-Quality Products</li>
+                <li>Affordable Pricing</li>
+                <li>Innovation and Adaptability</li>
+            </ul>
+        </div>
+
+        <!-- Our Mission -->
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to simplify the online shopping experience by combining convenience, affordability, and quality. 
+                We aim to empower our customers with choices that suit their needs and deliver exceptional service every step of the way.
+            </p>
+        </div>
+
+        <!-- Achievements -->
+        <div class="section">
+            <h2>Achievements</h2>
+            <p>
+                Over the years, B-Kart has achieved significant milestones, including:
+            </p>
+            <ul>
+                <li>Serving over 1 million satisfied customers worldwide.</li>
+                <li>Receiving accolades for our exceptional customer service.</li>
+                <li>Launching innovative features like personalized product recommendations.</li>
+            </ul>
+        </div>
+
+        <!-- Developed By -->
+        <div class="section">
+            <h2>Developed By</h2>
+            <p>
+                This platform is proudly developed by <strong>Kandhukuru Bhargav</strong>, who envisioned creating a shopping platform 
+                that blends technology, creativity, and functionality. With a deep passion for coding and user experience, Bhargav ensures 
+                that B-Kart remains at the forefront of innovation in the e-commerce industry.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 B-Kart. Developed by Kandhukuru Bhargav. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product Details</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Sacramento&display=swap');
+
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, rgb(128, 182, 207), #fff);
+            color: #333333;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: #2d2d2d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo span {
+            font-size: 36px;
+            font-family: 'Pacifico', cursive;
+            color: #FFD700;
+            margin-left: 10px;
+            position: relative;
+            right: 13px;
+            top: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #FFD700;
+            color: #2d2d2d;
+        }
+
+        /* Form Section */
+        .form-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        #addProduct {
+            width: 350px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
+            left: 100px;
+            bottom: 30px;
+        }
+
+        #addProduct h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2d2d2d;
+            text-align: center;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        select:hover, input:hover {
+            border-color: #FFD700;
+        }
+
+        #Add {
+            width: 100%;
+            background-color: #2d2d2d;
+            color: #FFD700;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #Add:hover {
+            background-color: #FFD700;
+            color: #2d2d2d;
+        }
+
+        .product-image {
+            max-width: 800px;
+            height: 500px;
+            position: relative;
+            left: 100px;
+            bottom: 70px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d2d2d;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logoB-kart-removebg-preview.png" alt="Logo" style="height: 60px;">
+            <span>B-Kart</span>
+        </div>
+        <nav>
+            <a href="CustomerLogin.html">Login</a>
+            <a href="AdminLogin.html">Admin Login</a>
+            <a href="CustomerRegistration.html">Register</a>
+        </nav>
+    </header>
+
+    <center>
+        <div class="form-container">
+            <!-- Add Product Form -->
+            <div id="addProduct">
+                <h2>Add Product Details</h2>
+                <form action="addProducts"  enctype="multipart/form-data">
+                    <select id="category" name="category" onchange="updateBrands()">
+                        <option value="">Select Category</option>
+                        <option value="Tv">Tv</option>
+                        <option value="Men">Men</option>
+                        <option value="Women">Women</option>
+                        <option value="Mobiles">Electronics</option>
+                        <option value="Groceries">Groceries</option>
+                    </select>
+    
+                    <select id="brand" name="brand">
+                        <option value="">Select Brand</option>
+                    </select>
+        
+                    <input type="text" placeholder="Enter Product Name" name="name" required>
+                    <input type="number" placeholder="Enter Product Price" name="price" required>
+                    <input type="number" placeholder="Enter Product Quantity" name="quantity" required>
+                    <input type="number" placeholder="Enter Product Discount (%)" name="discount">
+                    <input type="file" name="image" accept="image/*" required>
+                    <input type="submit" value="Add Product" id="Add">
+                </form>
+            </div>
+
+            <!-- Image Section -->
+            <img src="images/shoppingwomen.png" alt="Product" class="product-image">
+        </div>
+    </center>
+
+    <footer>
+        <p>&copy; 2024 B-Kart. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const brandData = {
+            Tv: ["Sony", "Samsung", "Apple", "LG"],
+            Men: ["Nike", "Adidas", "Puma", "Levis"],
+            Women: ["zara", "zudio", "max", "trends"],
+            Mobiles: ["Realme", "Vivo", "Mi", "Oppo","iphone","samsung","moto"],
+            Groceries:["Oil","milk","rice","Onions","Allpowder"]
+        };
+
+        function updateBrands() {
+            const categorySelect = document.getElementById("category");
+            const brandsSelect = document.getElementById("brand");
+            const selectedCategory = categorySelect.value;
+
+            // Clear existing options
+            brandsSelect.innerHTML = "<option value=''>Select Brand</option>";
+
+            // Populate new options based on selected category
+            if (brandData[selectedCategory]) {
+                brandData[selectedCategory].forEach(brand => {
+                    const option = document.createElement("option");
+                    option.value = brand.toLowerCase();
+                    option.textContent = brand;
+                    brandsSelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

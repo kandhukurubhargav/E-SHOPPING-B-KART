@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - B-kart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Sacramento&display=swap');
+
+        /* General Styles */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+       body {
+            background: linear-gradient(to bottom, rgb(128, 182, 207), #fff);
+            color: #333333;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: #2d2d2d; /* Dark Gray */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo {
+            font-size: 35px; /* Adjusted font size */
+            font-family: 'Pacifico', cursive;
+            color: #FFD700; /* Gold text */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #FFD700;
+            color: #2d2d2d;
+        }
+
+        /* Login Container */
+        .login-container {
+            width: 350px;
+            margin: 100px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Light background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            font-size: 24px;
+            color: #2d2d2d; /* Dark text */
+            margin-bottom: 20px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-container input[type="submit"] {
+            background-color: #FFD700;
+            border: none;
+            color: #2d2d2d;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #ffcc80;
+            color: #2d2d2d;
+        }
+
+        .login-container a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 10px;
+            color: #2d2d2d;
+            text-decoration: none;
+            border-radius: 18px;
+            transition: all 0.3s ease-in-out;
+            font-size: 10px;
+            color: blue;
+        }
+        header .logo img {
+            height: 80px;
+        }
+
+        header .logo span {
+            font-size: 50px;
+            font-family: 'Pacifico', cursive; /* Same font as admin logo */
+            color: #FFD700;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            bottom: 12px;
+            right: 18px;
+        }
+
+        .login-container a:hover {
+            background-color: #ffcc80;
+            color: #2d2d2d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+  <div class="logo">
+            <img src="images/logoB-kart-removebg-preview.png" alt="B-Kart Logo">
+            <span>B-Kart</span>
+        </div>        <nav>
+            <a href="HomePage.html">Home</a>
+            <a href="AdminLogin.html">Admin Login</a>
+            <a href="CustomerRegistration.html">Register</a>
+        </nav>
+    </header>
+
+    <!-- Login Form -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="customerLogin">
+            <input type="email" placeholder="Enter Email ID" required name="emailid"><br>
+            <input type="password" placeholder="Enter Password" required name="password"><br>
+            <input type="submit" value="Login">
+        </form>
+        <!-- Register Button -->
+        <h6>Don't have an account?<a href="CustomerRegistration.html"> Register</a><br>
+            forgot Password <a href="ForgotPassword.jsp">create new </a>
+        </h6>
+    </div>
+</body>
+</html>
